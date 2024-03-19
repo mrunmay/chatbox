@@ -26,9 +26,9 @@ ChatBox is a messaging application built with Spring Boot and RabbitMQ for messa
 
 1. Clone the repository:
 
-   ```bash
+```
    git clone https://github.com/yourusername/chatbox.git
-
+```
 1.Set up RabbitMQ on your local machine or use a cloud provider.
 
 2.Configure RabbitMQ connection details in application.properties.
@@ -36,7 +36,7 @@ ChatBox is a messaging application built with Spring Boot and RabbitMQ for messa
 3.Build the application using Maven:
 
 ```
-git clone https://github.com/mrunmay/chatbox.git
+mvn clean install
  ```
 
 4.Run the application:
