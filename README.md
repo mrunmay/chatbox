@@ -13,6 +13,7 @@ ChatBox is a messaging application built with Spring Boot and RabbitMQ for messa
 - Java 17
 - Spring Boot 3.2.3
 - RabbitMQ
+- h2 embedded Database
 - Swagger (for API documentation)
 
 ## Deployment
@@ -20,7 +21,6 @@ ChatBox is a messaging application built with Spring Boot and RabbitMQ for messa
 
 ## GitHub Repository
 - All infrastructure and application code are hosted in a public GitHub repository. You can access the code, configuration, and workflow details at [GitHub Repository Link](https://github.com/mrunmay/chatbox).
-
 
 ## Getting Started
 
@@ -50,6 +50,12 @@ java -jar target/chatbox.jar
 ```
 http://localhost:8080/swagger-ui/index.html
 ```
+6.Access the h2 database through web browser:
+```
+http://localhost:8080/console
+```
+Note: _2 default users(john, nick) created through data.sql_
+
 
 ## API Endpoints
 
