@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "4f2bb433-d2cb-4560-b9e4-c2ab2bbdea48",
+		"name": "Chatbox Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3049304"
+	},
+	"item": [
+		{
+			"name": "Register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"mrunmaya\",\n    \"password\": \"mypassword\",\n    \"email\": \"mrunmaya@mmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/user/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sender\":\"john\",\n    \"content\":\"how are you\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/message/send",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"message",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read messages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/message/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"message",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete messages for an user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/message/deleteAllFor/nick",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"message",
+						"deleteAllFor",
+						"nick"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
