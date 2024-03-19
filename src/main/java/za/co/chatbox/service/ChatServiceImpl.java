@@ -1,6 +1,7 @@
 package za.co.chatbox.service;
 
 import jakarta.transaction.Transactional;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,8 @@ import java.util.List;
 
 @Service
 @Transactional
+@Slf4j
+
 public class ChatServiceImpl implements ChatService {
 
     @Autowired
@@ -49,10 +52,8 @@ public class ChatServiceImpl implements ChatService {
     @Override
     @RabbitListener(queues = "chat.queue")
     public void receiveMessage(ChatMessage message) {
-        System.out.println(message.getSender() + " @ " + new Date());
-        System.out.println("~ " + message.getContent());
-        // Broadcast message to other clients
-        // You can implement this logic here
+        log.info(message.getSender() + " @ " + new Date());
+        log.info("~ " + message.getContent());
     }
 
     @Override
